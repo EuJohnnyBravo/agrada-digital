@@ -1,5 +1,192 @@
 @use '../utils/variables' as *
 @use '../utils/buttons'
-@use 'banners'
 
-        
+main
+  background: $primary-gray-50
+
+  .full-banner
+    display: flex
+    justify-content: center
+    overflow: hidden
+    height: auto
+    max-width: 100vw
+
+    img
+      width: 100vw
+      height: auto
+      object-fit: contain
+
+  .container
+    display: flex
+    flex-direction: column
+    max-width: 100vw
+    margin: 1rem 0
+
+    .vitrine
+      .vitrine-container
+        h1
+          padding: 0 0.5rem
+          font-size: 1rem
+          font-weight: 800
+
+        .swiper-produtos
+          overflow: hidden
+          margin: 1rem auto
+          max-width: 100vw
+          box-sizing: border-box
+          width: 100%
+          height: 100%
+
+          .swiper-wrapper
+            .swiper-slide
+              text-align: center
+              /* Center slide text vertically */
+              display: -webkit-box
+              display: -ms-flexbox
+              display: -webkit-flex
+              display: flex
+              -webkit-box-pack: center
+              -ms-flex-pack: center
+              -webkit-justify-content: center
+              justify-content: center
+              -webkit-box-align: center
+              -ms-flex-align: center
+              -webkit-align-items: center
+              align-items: center
+
+              .cartao-produtos
+                background: $primary-white
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                border: 1px solid $primary-gray-200
+                border-radius: 0.625rem
+                margin: 0.5rem
+                padding: 1rem
+                gap: 0.5rem
+
+                picture
+                  display: flex
+                  justify-content: center
+
+                  img
+                    width: 168px
+                    height: 168px
+
+                .titulo
+                  font-size: 1rem
+                  font-weight: 600
+                  color: $primary-black
+
+                p
+                  font-size: 0.8rem
+                  font-weight: 400
+                  color: $primary-gray-500
+
+                .preco
+                  font-size: 1.5rem
+                  font-weight: 800
+                  color: $primary-green
+
+                .risco
+                  text-decoration: line-through
+
+          .swiper-button-next, .swiper-button-prev
+            display: none
+
+
+    .banners
+      width: 100%
+      max-width: 100vw
+      overflow: hidden
+      margin: 1rem 0
+
+      .swiper-banners
+        .swiper-wrapper
+          .swiper-slide
+            display: flex
+            justify-content: center
+            align-items: center
+            width: auto
+
+            picture
+              display: flex
+              justify-content: center
+
+              img
+                max-width: 100vw
+                height: auto
+
+      .no-swiper
+        display: none
+
+@media screen and (min-width: 768px)
+  main
+    .container
+      padding: 0 5vw
+
+      .vitrine
+        margin: 1rem 0
+
+        .vitrine-container
+          h1
+            padding: 0
+
+          .swiper-produtos
+            .swiper-wrapper
+              .swiper-slide
+                .cartao-produtos
+                  padding: 1rem
+                  margin: 0
+
+                  picture
+                    img
+                      width: 168px
+                      height: 168px
+
+            .swiper-button-next, .swiper-button-prev
+              .arrow
+
+@media screen and (min-width: 1024px)
+  main
+    .container
+      padding: 0 15vw
+
+      .vitrine
+        margin: 1rem 0
+
+        .vitrine-container
+          h1
+            padding: 0 0.5rem
+
+          .swiper-produtos
+            .swiper-wrapper
+              .swiper-slide
+                .cartao-produtos
+                  picture
+                    img
+                      width: 200px
+                      height: 200px
+
+            .swiper-button-next, .swiper-button-prev
+              .arrow
+
+
+      .banners
+        .swiper
+          display: none
+
+        .no-swiper
+          display: flex
+          max-width: 100vw
+          justify-content: space-between
+          gap: 1rem
+
+          picture
+            display: flex
+            justify-content: center
+
+            img
+              width: 35vw
+              height: auto
