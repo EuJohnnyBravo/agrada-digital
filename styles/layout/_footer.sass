@@ -1,0 +1,88 @@
+@use '../utils/variables' as *
+
+footer
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  width: 100vw
+
+  .content
+    background: $primary-black
+    display: flex
+    justify-content: center
+    max-width: 100vw
+
+    div
+      display: flex
+      flex-direction: column
+      justify-content: center
+      gap: 0.5rem
+      padding: 0.5rem 0
+
+      picture
+        display: flex
+        justify-content: center
+        overflow: hidden
+        height: auto
+        max-width: 100%
+
+        img
+          width: 150px
+          height: auto
+          object-fit: contain
+
+      p
+        font-family: $font-axiforma
+        font-size: 0.6rem
+        text-align: justify
+        color: $primary-white
+        line-height: 1rem
+        padding: 0 1rem
+        word-break: break-word
+        hyphens: auto
+
+  .cartoes
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    margin: 1rem 0
+    gap: .5rem
+
+    h2
+      font-size: .8rem
+      font-weight: bold
+      color: $primary-green
+
+    img
+      width: 200px
+      height: auto
+
+@media screen and (min-width: 768px)
+  footer
+    .content
+      div
+        flex-direction: row
+        justify-content: center
+        padding: 1rem 0
+        flex: 1 1 100%
+        max-width: 80vw
+
+        picture
+          img
+            width: 184px
+
+        p
+          font-size: 0.8rem
+          max-width: 50vw
+
+    .cartoes
+      img
+        width: 300px
+        height: auto
+
+@media screen and (min-width: 1024px)
+  footer
+    .content
+      div
+        gap: 1.5rem
