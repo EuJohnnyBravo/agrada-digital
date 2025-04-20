@@ -24,7 +24,54 @@
     <div class="content"></div>
 </header>
 <main>
-    <p>oi</p>
+    <picture class="full-banner">
+        <!-- Essa é a imagem maior, para telas acima de 768px -->
+        <source media="(min-width: 768px)" srcset="assets/images/full-banner@2x.png">
+        <!-- Essa é a imagem padrão, carregada no mobile -->
+        <img alt="Banner responsivo" src="assets/images/full-banner.png">
+    </picture>
+    <div>
+        <section class="vitrine" id="vitrine-1">vitrine aqui</section>
+        <section class="banners">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <!-- Essa é a imagem maior, para telas acima de 768px -->
+                            <source media="(min-width: 768px)" srcset="assets/images/banner-templates@2x.png">
+                            <!-- Essa é a imagem padrão, carregada no mobile -->
+                            <img alt="Banner responsivo" src="assets/images/banner-templates.png">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <!-- Essa é a imagem maior, para telas acima de 768px -->
+                            <source media="(min-width: 768px)" srcset="assets/images/banner-servicos@2x.png">
+                            <!-- Essa é a imagem padrão, carregada no mobile -->
+                            <img alt="Banner responsivo" src="assets/images/banner-servicos.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="no-swiper">
+                <picture>
+                    <!-- Essa é a imagem maior, para telas acima de 768px -->
+                    <source media="(min-width: 768px)" srcset="assets/images/banner-templates@2x.png">
+                    <!-- Essa é a imagem padrão, carregada no mobile -->
+                    <img alt="Banner responsivo" src="assets/images/banner-templates.png">
+                </picture>
+                <picture>
+                    <!-- Essa é a imagem maior, para telas acima de 768px -->
+                    <source media="(min-width: 768px)" srcset="assets/images/banner-servicos@2x.png">
+                    <!-- Essa é a imagem padrão, carregada no mobile -->
+                    <img alt="Banner responsivo" src="assets/images/banner-servicos.png">
+                </picture>
+            </div>
+        </section>
+        <section class="vitrine" id="vitrine-2"></section>
+    </div>
 </main>
 <footer>
     <div class="content">
