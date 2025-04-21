@@ -71,8 +71,8 @@ main
                   justify-content: center
 
                   img
-                    width: 268px
-                    height: 268px
+                    width: 80vw
+                    height: 80vw
 
                 .titulo
                   font-size: 1rem
@@ -97,6 +97,8 @@ main
           display: none
           content: none
 
+        .arrow
+          display: none
 
     .banners
       width: 100%
@@ -147,8 +149,10 @@ main
 
                   picture
                     img
-                      width: 168px
-                      height: 168px
+                      min-width: 10vw
+                      min-height: 10vw
+                      max-width: 25vw
+                      max-height: 25vw
 
           .swiper-button-prev
             left: -1.7rem
@@ -186,8 +190,10 @@ main
                 .cartao-produtos
                   picture
                     img
-                      width: 200px
-                      height: 200px
+                      width: 268px
+                      height: 268px
+                      max-width: 11vw
+                      max-height: 11vw
 
       .banners
         .swiper
@@ -206,24 +212,3 @@ main
             img
               width: 35vw
               height: auto
-
-@media screen and (min-width: 1441px)
-  main
-    .container
-      padding: 0 15vw
-
-      .vitrine
-        margin: 1rem 0
-
-        .vitrine-container
-          h1
-            padding: 0 0.5rem
-
-          .swiper-produtos
-            .swiper-wrapper
-              .swiper-slide
-                .cartao-produtos
-                  picture
-                    img
-                      width: 268px
-                      height: 268px
