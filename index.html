@@ -28,11 +28,48 @@
             <!-- Essa é a imagem padrão, carregada no mobile -->
             <img alt="Banner responsivo" src="assets/logos/logos-agrada-black.png">
         </picture>
-        <div class="busca">Busca</div>
+        <form class="busca">
+            <label for="search">
+                <input id="search" placeholder="O que você procura?" type="search">
+            </label>
+            <button class="btn btn-green" type="button">
+                <img alt="Lupa" class="lupa" src="assets/icons/lupa.svg" width="20">
+                <span class="texto-busca">Buscar</span>
+            </button>
+        </form>
         <nav>
-            <a href="">1</a>
-            <a href="">1</a>
-            <a href="">1</a>
+            <div class="hover-menu">
+                <div class="item-menu">
+                    <div>
+                        <img alt="Logo" src="assets/icons/login.svg">
+                    </div>
+                    <span class="texto">Faça login</span>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-green">Faça o login</button>
+                    <span>Ou</span>
+                    <button class="btn btn-black">Cadastre-se</button>
+                </div>
+            </div>
+            <div class="hover-menu">
+                <div class="item-menu">
+                    <div>
+                        <img alt="Logo" src="assets/icons/atendimento.svg">
+                    </div>
+                    <span class="texto">Atendimento</span>
+                </div>
+                <div class="dropdown">
+                    <a>Somos os verdadeiros especialistas em e-commerce</a>
+                    <button class="btn btn-black">(51) 980.272.522</button>
+                </div>
+            </div>
+            <div class="item-menu">
+                <div>
+                    <img alt="Logo" src="assets/icons/carrinho.svg">
+                    <span id="quantidade"></span>
+                </div>
+                <span class="texto">Carrinho</span>
+            </div>
         </nav>
     </div>
 </header>
@@ -144,6 +181,7 @@
 <script src="scripts/swiperBanners.js"></script>
 <script src="scripts/swiperCards.js"></script>
 <script src="scripts/cloneVitrine.js"></script>
+<script src="scripts/handleMenu.js"></script>
 <script>
     $(document).ready(function () {
         function initSwipers() {
@@ -154,10 +192,8 @@
         $(window).on('load', initSwipers);
         $(window).on('resize', initSwipers);
 
-        // Clonar a vitrine
-        clonarVitrine();
     });
 </script>
-<script src="scripts/modalHandler.js"></script>
+<script src="scripts/handleComprar.js"></script>
 </body>
 </html>

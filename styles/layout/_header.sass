@@ -3,7 +3,7 @@
 header
   display: flex
   flex-direction: column
-  max-width: 100%
+  max-width: 100vw
 
   .aviso
     background: $primary-black
@@ -21,6 +21,114 @@ header
       word-break: break-word
       max-width: 100%
 
+  .content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: .5rem
+    padding: 1rem 5px
+
+    picture
+      img
+        max-width: 180px
+        height: auto
+
+    .busca
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      max-width: 400px
+      gap: 0.5rem
+
+      label
+        flex: 1
+
+        input[type="search"]
+          width: 100%
+          background: $primary-gray-200
+          color: $primary-gray-500
+          border: none
+          border-radius: 5px
+          padding: 10px
+
+      button
+        background: $primary-green
+        border-radius: 5px
+        padding: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .texto-busca
+          display: none
+
+    nav
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 1.5rem
+
+      .item-menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        gap: 5px
+        color: $primary-black
+
+        div
+          position: relative
+
+          .quantidade
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            top: -5px
+            right: -10px
+            background: $primary-black
+            color: $primary-white
+            font-size: 0.7rem
+            width: 15px
+            height: 15px
+            border-radius: 50%
+
+          img
+            width: 22px
+            height: 22px
+
+      .hover-menu
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &:hover .dropdown
+          display: flex
+
+        .dropdown
+          display: none
+          flex-direction: column
+          align-items: center
+          gap: 10px
+          position: absolute
+          top: 100%
+          padding: 15px
+          background: $primary-white
+          border-radius: 8px
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+          z-index: 100
+          width: 175px
+
+          span, a
+            font: normal normal 500 12px/12px $font-poppins
+            color: $primary-black
+            text-align: center
+
+
 @media screen and (min-width: 768px)
   header
     .aviso
@@ -32,3 +140,29 @@ header
     .aviso
       p
         font-size: 1.2rem
+
+    .content
+      flex-direction: row
+      justify-content: space-between
+      padding: 1rem 15vw
+      gap: 3rem
+
+      .busca
+        min-width: 30vw
+
+        img
+          display: none
+
+        button
+          .texto-busca
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 1rem
+
+@media screen and (min-width: 1440px)
+  header
+    .content
+      nav
+        a
+          flex-direction: row

@@ -8,10 +8,9 @@ main
     display: flex
     justify-content: center
     overflow: hidden
-    max-width: 100vw
 
     img
-      width: 100vw
+      width: 200vw
       height: auto
       object-fit: contain
 
@@ -23,6 +22,8 @@ main
 
     .vitrine
       .vitrine-container
+        margin: 2rem 0
+
         h1
           padding: 0 0.5rem
           font-size: 1rem
@@ -88,7 +89,7 @@ main
                   display: flex
                   justify-content: center
                   text-align: center
-                  width: 50%
+                  width: 100%
 
         .swiper-button-prev::after,
         .swiper-button-next::after
@@ -124,6 +125,10 @@ main
 
 @media screen and (min-width: 768px)
   main
+    .full-banner
+      img
+        width: 130vw
+
     .container
       padding: 0 5vw
 
@@ -170,6 +175,10 @@ main
 
 @media screen and (min-width: 1024px)
   main
+    .full-banner
+      img
+        width: 100vw
+
     .container
       padding: 0 15vw
 
@@ -206,3 +215,15 @@ main
             img
               width: 35vw
               height: auto
+
+@media screen and (min-width: 1440px)
+  main
+    .container
+      .vitrine
+        .vitrine-container
+          .swiper-produtos
+            .swiper-wrapper
+              .swiper-slide
+                .cartao-produtos
+                  .btn-comprar
+                    width: 50%
