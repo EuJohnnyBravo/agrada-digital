@@ -71,8 +71,8 @@ main
                   justify-content: center
 
                   img
-                    width: 168px
-                    height: 168px
+                    width: 268px
+                    height: 268px
 
                 .titulo
                   font-size: 1rem
@@ -92,8 +92,10 @@ main
                 .risco
                   text-decoration: line-through
 
-          .swiper-button-next, .swiper-button-prev
-            display: none
+        .swiper-button-prev::after,
+        .swiper-button-next::after
+          display: none
+          content: none
 
 
     .banners
@@ -130,7 +132,10 @@ main
         margin: 1rem 0
 
         .vitrine-container
+          position: relative
+
           h1
+            font-size: 2rem
             padding: 0
 
           .swiper-produtos
@@ -145,8 +150,23 @@ main
                       width: 168px
                       height: 168px
 
-            .swiper-button-next, .swiper-button-prev
-              .arrow
+          .swiper-button-prev
+            left: -1.7rem
+
+          .swiper-button-next
+            right: -1.7rem
+
+          .arrow
+            overflow: visible
+            transform: translateY(-50%)
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $primary-black
+            width: 35px
+            height: 25px
+            border-radius: 5px
+
 
 @media screen and (min-width: 1024px)
   main
@@ -169,10 +189,6 @@ main
                       width: 200px
                       height: 200px
 
-            .swiper-button-next, .swiper-button-prev
-              .arrow
-
-
       .banners
         .swiper
           display: none
@@ -190,3 +206,24 @@ main
             img
               width: 35vw
               height: auto
+
+@media screen and (min-width: 1441px)
+  main
+    .container
+      padding: 0 15vw
+
+      .vitrine
+        margin: 1rem 0
+
+        .vitrine-container
+          h1
+            padding: 0 0.5rem
+
+          .swiper-produtos
+            .swiper-wrapper
+              .swiper-slide
+                .cartao-produtos
+                  picture
+                    img
+                      width: 268px
+                      height: 268px
