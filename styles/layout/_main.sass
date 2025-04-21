@@ -8,7 +8,6 @@ main
     display: flex
     justify-content: center
     overflow: hidden
-    height: auto
     max-width: 100vw
 
     img
@@ -33,26 +32,15 @@ main
           overflow: hidden
           margin: 1rem auto
           max-width: 100vw
-          box-sizing: border-box
           width: 100%
           height: 100%
 
           .swiper-wrapper
             .swiper-slide
-              text-align: center
-              /* Center slide text vertically */
-              display: -webkit-box
-              display: -ms-flexbox
-              display: -webkit-flex
               display: flex
-              -webkit-box-pack: center
-              -ms-flex-pack: center
-              -webkit-justify-content: center
               justify-content: center
-              -webkit-box-align: center
-              -ms-flex-align: center
-              -webkit-align-items: center
               align-items: center
+              text-align: center
 
               .cartao-produtos
                 background: $primary-white
@@ -112,7 +100,6 @@ main
             display: flex
             justify-content: center
             align-items: center
-            width: auto
 
             picture
               display: flex
@@ -170,7 +157,6 @@ main
             width: 35px
             height: 25px
             border-radius: 5px
-
 
 @media screen and (min-width: 1024px)
   main
