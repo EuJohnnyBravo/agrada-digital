@@ -57,12 +57,14 @@ main
                 picture
                   display: flex
                   justify-content: center
+                  margin: 0.5rem 0
 
                   img
                     width: 80vw
                     height: 80vw
 
                 .titulo
+                  margin: 0.5rem 0
                   font-size: 1rem
                   font-weight: 600
                   color: $primary-black
@@ -79,6 +81,14 @@ main
 
                 .preco
                   text-decoration: line-through
+
+                .btn-comprar
+                  @extend .btn-green
+                  @extend .btn
+                  display: flex
+                  justify-content: center
+                  text-align: center
+                  width: 50%
 
         .swiper-button-prev::after,
         .swiper-button-next::after
