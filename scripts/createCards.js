@@ -60,7 +60,7 @@ function criarParcelamentoProduto(price, installments) {
 }
 
 function criarBotaoComprar() {
-    return $('<button class="btn btn-green"/>').text('Comprar')
+    return $('<button class="btn btn-green btn-comprar"/>').text('Comprar')
 }
 
 function criarCardProduto(produto) {
